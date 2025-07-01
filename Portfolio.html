@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Underdog — Story First, Brand Second</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #f26d21;
+      --bg-dark: #0a0a0a;
+      --bg-deep: #111111;
+      --text-light: #f1f1f1;
+      --text-muted: #aaaaaa;
+    }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    body {
+      font-family: 'Inter', sans-serif;
+      background-color: var(--bg-dark);
+      color: var(--text-light);
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+    header.hero {
+      height: 100vh;
+      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(10, 10, 10, 1)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+      padding: 0 10vw;
+      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+    }
+    header.hero h1 {
+      font-size: 4.5rem;
+      font-weight: 800;
+      color: var(--accent);
+      margin-bottom: 1rem;
+    }
+    header.hero p {
+      font-size: 1.4rem;
+      color: var(--text-muted);
+      max-width: 600px;
+    }
+    section {
+      display: flex;
+      align-items: center;
+      padding: 6vw 10vw;
+      gap: 5vw;
+      border-bottom: 1px solid #1a1a1a;
+    }
+    section:nth-child(even) {
+      flex-direction: row-reverse;
+      background-color: var(--bg-deep);
+    }
+    .section-text {
+      flex: 1;
+    }
+    .section-image {
+      flex: 1;
+    }
+    .section-image img {
+      width: 100%;
+      border-radius: 20px;
+      box-shadow: 0 20px 50px rgba(0,0,0,0.4);
+    }
+    h2.section-title {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+      color: var(--accent);
+    }
+    p, li {
+      font-size: 1.15rem;
+      color: #ddd;
+    }
+    ul.fancy-list {
+      list-style: none;
+      padding-left: 0;
+    }
+    ul.fancy-list li {
+      margin-bottom: 1rem;
+      padding-left: 1.5rem;
+      position: relative;
+    }
+    ul.fancy-list li::before {
+      content: '⟶';
+      position: absolute;
+      left: 0;
+      color: var(--accent);
+    }
+    .cta {
+      background: radial-gradient(circle, #f26d21 0%, #cc5213 100%);
+      color: #fff;
+      text-align: center;
+      padding: 6vw 10vw;
+    }
+    .cta h2 {
+      font-size: 2.8rem;
+      margin-bottom: 1rem;
+    }
+    .cta a {
+      color: #fff;
+      font-weight: 600;
+      text-decoration: underline;
+    }
+    footer {
+      background-color: #000;
+      color: #777;
+      text-align: center;
+      padding: 2rem;
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="hero">
+    <h1>We Turn Brave Brands Into Bold Movements.</h1>
+    <p>Underdog is a cinematic-first studio for founders rewriting the script. If you're building from grit, not privilege — you're one of us.</p>
+  </header>
+
+  <section class="about">
+    <div class="section-text">
+      <h2 class="section-title">Our Origin Story</h2>
+      <p>We weren’t born in a branding agency. We were forged in startup scrambles, garage desks, and founder DMs. <strong>Underdog</strong> was created to give a creative weapon to those who don’t have million-dollar budgets — but have billion-dollar intent. We operate like a story studio, not a service provider.</p>
+    </div>
+    <div class="section-image">
+      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80" alt="Garage hustle" />
+    </div>
+  </section>
+
+  <section class="beliefs">
+    <div class="section-text">
+      <h2 class="section-title">Our Beliefs</h2>
+      <ul class="fancy-list">
+        <li><strong>Stories Scale Trust</strong> — People don’t follow logos. They follow missions.</li>
+        <li><strong>Raw Beats Polished</strong> — Imperfect reels with real voice > soulless campaigns.</li>
+        <li><strong>Media is the Leverage</strong> — Every founder should think like a filmmaker.</li>
+        <li><strong>Underdogs Have an Edge</strong> — We know how to punch above our weight.</li>
+      </ul>
+    </div>
+    <div class="section-image">
+      <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849822_1280.jpg" alt="Bold beliefs" />
+    </div>
+  </section>
+
+  <section class="impact">
+    <div class="section-text">
+      <h2 class="section-title">How We Make Brands Feel</h2>
+      <ul class="fancy-list">
+        <li><strong>Founder Reels</strong> — High-emotion edits that break the scroll.</li>
+        <li><strong>Launch Narratives</strong> — We build emotional arcs, not one-time posts.</li>
+        <li><strong>Taglines & Slogans</strong> — Like: “Story First. Brand Second.”</li>
+        <li><strong>Content Engines</strong> — Systems that storytell at scale.</li>
+        <li><strong>Visual Identity</strong> — Cinematic sites and decks that feel like trailers.</li>
+      </ul>
+    </div>
+    <div class="section-image">
+      <img src="https://images.unsplash.com/photo-1593642634443-44adaa06623a?auto=format&fit=crop&w=1200&q=80" alt="Impactful content creation" />
+    </div>
+  </section>
+
+  <section class="cta">
+    <h2>Ready to Tell the Story Only You Can?</h2>
+    <p>Email us: <a href="mailto:underdog.agency@gmail.com">underdog.agency@gmail.com</a><br>
+    Follow the movement: <a href="https://instagram.com/underdogads" target="_blank">@underdogads</a></p>
+  </section>
+
+  <footer>
+    &copy; 2025 Underdog — Story First. Brand Second.
+  </footer>
+
+</body>
+</html>

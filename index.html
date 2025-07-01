@@ -20,48 +20,47 @@
     }
     body {
       font-family: 'Inter', sans-serif;
-      background-color: var(--bg-dark);
+      background: var(--bg-dark);
       color: var(--text-light);
-      overflow-x: hidden;
       line-height: 1.6;
+      overflow-x: hidden;
     }
     header.hero {
       height: 100vh;
-      background: linear-gradient(to bottom, rgba(0, 0, 0, 0.6), rgba(10, 10, 10, 1)), url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
+      background: linear-gradient(to bottom, rgba(0,0,0,0.6), rgba(10,10,10,1)),
+        url('https://images.unsplash.com/photo-1542744094-3a31f272c490?auto=format&fit=crop&w=1400&q=80') center/cover no-repeat;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-start;
       padding: 0 10vw;
-      text-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+      text-shadow: 0 2px 20px rgba(0,0,0,0.5);
     }
     header.hero h1 {
-      font-size: 4.5rem;
+      font-size: 3.5rem;
       font-weight: 800;
       color: var(--accent);
       margin-bottom: 1rem;
     }
     header.hero p {
-      font-size: 1.4rem;
+      font-size: 1.3rem;
       color: var(--text-muted);
       max-width: 600px;
     }
     section {
       display: flex;
-      align-items: center;
+      flex-wrap: wrap;
       padding: 6vw 10vw;
       gap: 5vw;
       border-bottom: 1px solid #1a1a1a;
+      align-items: center;
     }
     section:nth-child(even) {
       flex-direction: row-reverse;
-      background-color: var(--bg-deep);
+      background: var(--bg-deep);
     }
-    .section-text {
-      flex: 1;
-    }
-    .section-image {
-      flex: 1;
+    .section-text, .section-image {
+      flex: 1 1 100%;
     }
     .section-image img {
       width: 100%;
@@ -69,12 +68,12 @@
       box-shadow: 0 20px 50px rgba(0,0,0,0.4);
     }
     h2.section-title {
-      font-size: 2.8rem;
+      font-size: 2.4rem;
       margin-bottom: 1rem;
       color: var(--accent);
     }
     p, li {
-      font-size: 1.15rem;
+      font-size: 1.1rem;
       color: #ddd;
     }
     ul.fancy-list {
@@ -99,7 +98,7 @@
       padding: 6vw 10vw;
     }
     .cta h2 {
-      font-size: 2.8rem;
+      font-size: 2.4rem;
       margin-bottom: 1rem;
     }
     .cta a {
@@ -108,43 +107,39 @@
       text-decoration: underline;
     }
     footer {
-      background-color: #000;
+      background: #000;
       color: #777;
       text-align: center;
       padding: 2rem;
       font-size: 0.9rem;
     }
 
-    /* === Mobile Responsive Styles === */
+    /* Mobile Responsiveness */
     @media (max-width: 768px) {
       header.hero {
-        padding: 0 6vw;
         align-items: center;
         text-align: center;
-        background-position: center;
+        padding: 0 5vw;
       }
       header.hero h1 {
-        font-size: 2.5rem;
+        font-size: 2.4rem;
       }
       header.hero p {
-        font-size: 1rem;
-      }
-      section {
-        flex-direction: column !important;
-        text-align: center;
-        padding: 10vw 6vw;
-      }
-      .section-image {
-        margin-top: 2rem;
+        font-size: 1.1rem;
       }
       h2.section-title {
-        font-size: 2rem;
+        font-size: 1.8rem;
+        text-align: center;
       }
-      p, li {
-        font-size: 1rem;
+      .section-text, .section-image {
+        flex: 1 1 100%;
+        text-align: center;
       }
-      .cta h2 {
-        font-size: 2rem;
+      ul.fancy-list li {
+        padding-left: 1rem;
+      }
+      ul.fancy-list li::before {
+        left: 0.2rem;
       }
     }
   </style>
@@ -153,16 +148,16 @@
 
   <header class="hero">
     <h1>We Turn Brave Brands Into Bold Movements.</h1>
-    <p>Underdog is a cinematic-first studio for founders rewriting the script. If you're building from grit, not privilege — you're one of us.</p>
+    <p>Underdog is a cinematic‑first studio for founders rewriting the script. If you’re building from grit, not privilege — you’re one of us.</p>
   </header>
 
   <section class="about">
     <div class="section-text">
-      <h2 class="section-title">Our Origin Story</h2>
-      <p>We weren’t born in a branding agency. We were forged in startup scrambles, garage desks, and founder DMs. <strong>Underdog</strong> was created to give a creative weapon to those who don’t have million-dollar budgets — but have billion-dollar intent. We operate like a story studio, not a service provider.</p>
+      <h2 class="section-title">Built from Grit, Driven by Vision</h2>
+      <p>Underdog wasn’t born from boardrooms...</p>
     </div>
     <div class="section-image">
-      <img src="https://images.unsplash.com/photo-1551836022-d5d88e9218df?auto=format&fit=crop&w=1200&q=80" alt="Garage hustle" />
+      <img src="https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1200&q=80" alt="Cinematic computer setup" />
     </div>
   </section>
 
@@ -170,14 +165,14 @@
     <div class="section-text">
       <h2 class="section-title">Our Beliefs</h2>
       <ul class="fancy-list">
-        <li><strong>Stories Scale Trust</strong> — People don’t follow logos. They follow missions.</li>
-        <li><strong>Raw Beats Polished</strong> — Imperfect reels with real voice > soulless campaigns.</li>
-        <li><strong>Media is the Leverage</strong> — Every founder should think like a filmmaker.</li>
-        <li><strong>Underdogs Have an Edge</strong> — We know how to punch above our weight.</li>
+        <li><strong>Stories Scale Trust</strong> — People don’t follow logos...</li>
+        <li><strong>Raw Beats Polished</strong> — Imperfect reels...</li>
+        <li><strong>Media is the Leverage</strong> — Every founder...</li>
+        <li><strong>Underdogs Have an Edge</strong> — We know how to punch above...</li>
       </ul>
     </div>
     <div class="section-image">
-      <img src="https://cdn.pixabay.com/photo/2015/07/17/22/43/student-849822_1280.jpg" alt="Bold beliefs" />
+      <img src="https://images.unsplash.com/photo-1603574670812-d24560880210?auto=format&fit=crop&w=1200&q=80" alt="Core beliefs imagery" />
     </div>
   </section>
 
@@ -185,15 +180,15 @@
     <div class="section-text">
       <h2 class="section-title">How We Make Brands Feel</h2>
       <ul class="fancy-list">
-        <li><strong>Founder Reels</strong> — High-emotion edits that break the scroll.</li>
-        <li><strong>Launch Narratives</strong> — We build emotional arcs, not one-time posts.</li>
+        <li><strong>Founder Reels</strong> — High‑emotion edits...</li>
+        <li><strong>Launch Narratives</strong> — We build emotional arcs...</li>
         <li><strong>Taglines & Slogans</strong> — Like: “Story First. Brand Second.”</li>
         <li><strong>Content Engines</strong> — Systems that storytell at scale.</li>
-        <li><strong>Visual Identity</strong> — Cinematic sites and decks that feel like trailers.</li>
+        <li><strong>Visual Identity</strong> — Cinematic sites and decks...</li>
       </ul>
     </div>
     <div class="section-image">
-      <img src="https://images.unsplash.com/photo-1593642634443-44adaa06623a?auto=format&fit=crop&w=1200&q=80" alt="Impactful content creation" />
+      <img src="https://images.unsplash.com/photo-1522199710521-72d69614c702?auto=format&fit=crop&w=1200&q=80" alt="Backpack cinematic shot" />
     </div>
   </section>
 
@@ -203,9 +198,7 @@
     Follow the movement: <a href="https://instagram.com/underdogads" target="_blank">@underdogads</a></p>
   </section>
 
-  <footer>
-    &copy; 2025 Underdog — Story First. Brand Second.
-  </footer>
+  <footer>&copy; 2025 Underdog — Story First. Brand Second.</footer>
 
 </body>
 </html>
